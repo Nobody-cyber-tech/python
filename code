@@ -1,0 +1,33 @@
+import random 
+
+print("Hello, I am Albert")
+name = input("What is your name: ")
+
+print(f"{name}, I am thinking of a number between [1,100]\n")
+
+
+guess = random.randrange(1,100)
+print("Take guess")
+number =  int(input())
+attempts = 1
+
+while number != guess:
+    
+    attempts += 1
+
+    if number < guess:
+        print("It is too low")
+        print("Take guess")
+        number = int(input())
+        
+    elif number > guess:
+        print("It is too high")
+        print("Take guess")
+        number = int(input())
+
+    else:
+        break
+
+
+print("Congratulations")
+print(f"you have guessed the number in {attempts} attempts")
